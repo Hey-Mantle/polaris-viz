@@ -9,7 +9,7 @@
   "watch": {
     "build": {
       "patterns": [
-        "/packages/{polaris-viz-native,polaris-viz-core}/**/*.{tsx,ts}"
+        "/packages/{polaris-viz-core}/**/*.{tsx,ts}"
       ],
       "extensions": "ts,tsx",
       "ignore": [
