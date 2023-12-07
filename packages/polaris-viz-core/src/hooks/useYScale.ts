@@ -63,13 +63,11 @@ export function useYScale({
       (shouldRoundUp && shouldRoundScaleUp({yScale, maxValue: maxY, maxTicks}))
     ) {
       yScale.nice(maxTicks);
+    } else if (useFittedDomain) {
+      yScale.domain([minY, maxY]);
     } else {
-      if (useFittedDomain) {
-        yScale.domain([minY, maxY]);
-      } else {
-        const roundedDownMin = yScale.copy().nice(maxTicks).ticks(maxTicks)[0];
-        yScale.domain([Math.min(roundedDownMin, minY), Math.max(0, maxY)]);
-      }
+      const roundedDownMin = yScale.copy().nice(maxTicks).ticks(maxTicks)[0];
+      yScale.domain([Math.min(roundedDownMin, minY), Math.max(0, maxY)]);
     }
 
     const filteredTicks = integersOnly
@@ -104,6 +102,7 @@ export function useYScale({
     integersOnly,
     maxY,
     minY,
+    useFittedDomain,
   ]);
 
   return {
