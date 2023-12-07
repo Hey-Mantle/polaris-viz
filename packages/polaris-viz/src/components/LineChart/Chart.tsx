@@ -144,6 +144,8 @@ export function Chart({
     fixedWidth: yAxisOptions.fixedWidth,
     max: maxY,
     min: minY,
+    useFittedDomain: yAxisOptions.useFittedDomain,
+    shouldRoundUp: yAxisOptions.shouldRoundUp,
   };
 
   const {yAxisLabelWidth} = useYScale({

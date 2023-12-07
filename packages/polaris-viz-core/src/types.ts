@@ -69,11 +69,17 @@ export interface XAxisOptions {
   labelFormatter?: LabelFormatter;
   hide?: boolean;
   allowLineWrap?: boolean;
+  minX?: number;
+  maxX?: number;
 }
 export interface YAxisOptions {
   labelFormatter?: LabelFormatter;
   integersOnly?: boolean;
   fixedWidth?: number | false;
+  minY?: number;
+  maxY?: number;
+  useFittedDomain?: boolean;
+  shouldRoundUp?: boolean;
 }
 
 // === Theme types === //

@@ -19,6 +19,7 @@ export interface Props {
   shouldRoundUp?: boolean;
   verticalOverflow?: boolean;
   fixedWidth?: number | false;
+  useFittedDomain?: boolean;
 }
 
 export function useYScale({
@@ -30,6 +31,7 @@ export function useYScale({
   shouldRoundUp = true,
   verticalOverflow = true,
   fixedWidth,
+  useFittedDomain = false,
 }: Props) {
   const {characterWidths} = useChartContext();
 
@@ -62,9 +64,12 @@ export function useYScale({
     ) {
       yScale.nice(maxTicks);
     } else {
-      const roundedDownMin = yScale.copy().nice(maxTicks).ticks(maxTicks)[0];
-
-      yScale.domain([Math.min(roundedDownMin, minY), Math.max(0, maxY)]);
+      if (useFittedDomain) {
+        yScale.domain([minY, maxY]);
+      } else {
+        const roundedDownMin = yScale.copy().nice(maxTicks).ticks(maxTicks)[0];
+        yScale.domain([Math.min(roundedDownMin, minY), Math.max(0, maxY)]);
+      }
     }
 
     const filteredTicks = integersOnly
