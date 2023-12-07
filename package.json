@@ -1,5 +1,5 @@
 {
-  "name": "@shopify/polaris-viz--root",
+  "name": "@heymantle/polaris-viz",
   "description": "Shopify’s viz component library",
   "private": true,
   "workspaces": [
@@ -160,5 +160,10 @@
   },
   "dependencies": {
     "concurrently": "^7.0.0"
+  },
+  "repository": "https://github.com/Hey-Mantle/polaris-viz",
+  "publishConfig": {
+    "@heymantle:registry": "https://registry.npmjs.org/",
+    "access": "public"
   }
 }
