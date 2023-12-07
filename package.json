@@ -1,7 +1,7 @@
 {
   "name": "@heymantle/polaris-viz",
   "description": "Shopify’s viz component library",
-  "private": true,
+  "private": false,
   "workspaces": [
     "sandbox",
     "packages/*"
