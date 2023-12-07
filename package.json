@@ -17,6 +17,7 @@
       ]
     }
   },
+  "version": "0.0.1",
   "scripts": {
     "build": "loom build",
     "storybook": "STORYBOOK_SHOW=dev start-storybook -p 6006 -s public",
