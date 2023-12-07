@@ -10,6 +10,10 @@ export function getYAxisOptionsWithDefaults(
     labelFormatter: (value: number) => `${value}`,
     integersOnly: false,
     fixedWidth: false,
+    maxY: Infinity,
+    minY: -Infinity,
+    useFittedDomain: false,
+    shouldRoundUp: true,
     ...yAxisOptionsFiltered,
   };
 }

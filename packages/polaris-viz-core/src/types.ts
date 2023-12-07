@@ -69,8 +69,6 @@ export interface XAxisOptions {
   labelFormatter?: LabelFormatter;
   hide?: boolean;
   allowLineWrap?: boolean;
-  minX?: number;
-  maxX?: number;
 }
 export interface YAxisOptions {
   labelFormatter?: LabelFormatter;
