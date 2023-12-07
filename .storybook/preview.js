@@ -41,12 +41,6 @@ const storiesOrder = {
     Subcomponents: null,
     Charts: null,
   },
-  'polaris-viz-native': {
-    'Getting Started': null,
-    'Available Charts': null,
-    Subcomponents: null,
-    Charts: null,
-  },
   Contributing: {
     README: null,
     'Code of Conduct': null,

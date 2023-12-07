@@ -5,7 +5,7 @@ var readline = require('readline');
 
 const glob = require('glob');
 
-const packages = ['polaris-viz', 'polaris-viz-core', 'polaris-viz-native'];
+const packages = ['polaris-viz', 'polaris-viz-core'];
 const packagesEsnext = ['polaris-viz', 'polaris-viz-core'];
 const workspacePackageJSON = require('../package.json');
 
